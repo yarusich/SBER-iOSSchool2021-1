@@ -13,6 +13,7 @@ class ViewController: BaseViewController {
 
     private let networkService: PhotoNetworkServiceProtocol
     private var dataSource = [GetPhotoDataResponse]()
+
     
 
     // MARK: - Init
@@ -124,12 +125,10 @@ extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let viewController = ImageViewController(networkService: networkService, imageUrl: dataSource[indexPath.row].url)
+        let viewController = ImageViewController(networkService: networkService, imageUrl: dataSource[indexPath.row].src.original)
         navigationController?.present(viewController, animated: true, completion: nil)
     }
 }
-
-
 
 
 

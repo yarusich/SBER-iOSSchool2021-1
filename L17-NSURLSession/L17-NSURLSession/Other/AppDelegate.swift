@@ -17,13 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
         let service = PhotoNetworkService()
-
-        let navigationController = UINavigationController()
-        let rootViewController = ViewController(networkService: service as PhotoNetworkServiceProtocol)
-        navigationController.viewControllers = [rootViewController]
-
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+        window?.rootViewController = UINavigationController(rootViewController: ViewController(networkService: service))
         window?.makeKeyAndVisible()
         
         return true

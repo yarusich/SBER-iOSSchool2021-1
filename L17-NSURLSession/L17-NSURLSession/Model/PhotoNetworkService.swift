@@ -43,7 +43,8 @@ extension PhotoNetworkService: PhotoNetworkServiceProtocol {
             } catch let error as NetworkServiceError {
                 completion(.failure(error))
             } catch { completion(.failure(.decodable)) }
-        }.resume()
+        }
+        .resume()
     }
     
     func loadImage(imageUrl: String, completion: @escaping (Data?) -> Void) {
@@ -60,7 +61,8 @@ extension PhotoNetworkService: PhotoNetworkServiceProtocol {
             } catch {
                 completion(nil)
             }
-        }.resume()
+        }
+        .resume()
     }
     
     private func httpResponse(data: Data?, response: URLResponse?) throws -> Data {
