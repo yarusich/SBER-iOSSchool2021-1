@@ -31,6 +31,7 @@ final class ImageViewController: BaseViewController {
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -39,6 +40,7 @@ final class ImageViewController: BaseViewController {
         
         configureUI()
         loadData()
+
     }
     
     deinit {
