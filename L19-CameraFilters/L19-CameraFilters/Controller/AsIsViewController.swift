@@ -20,7 +20,7 @@ final class AsIsViewController: UIViewController {
         slider.value = 0
         slider.minimumValue = 0
         slider.maximumValue = 1
-        //        slider.addTarget(self, action: #selector(didEndChanged(_:)), for: .editingDidEnd)
+//        slider.addTarget(self, action: #selector(didEndChanged(_:)), for: .editingDidEnd)
         slider.translatesAutoresizingMaskIntoConstraints = false
         
         return slider
@@ -30,7 +30,7 @@ final class AsIsViewController: UIViewController {
         let label = UILabel()
         label.text = "Интенсивность фильтра"
         label.textAlignment = .center
-        //        label.font = label.font.withSize(15)
+//        label.font = label.font.withSize(15)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -59,8 +59,6 @@ final class AsIsViewController: UIViewController {
         view.addSubview(slider)
         view.addSubview(saveButton)
         setConstraintes()
-        
-//        slider.value = delegate?.filterIntensity ?? 0
     }
     
     private func setConstraintes() {
@@ -85,7 +83,6 @@ final class AsIsViewController: UIViewController {
     
     
     @objc private func buttonTapped() {
-//        delegate?.filterIntensity = slider.value
         navigationController?.popViewController(animated: true)
     }
     
