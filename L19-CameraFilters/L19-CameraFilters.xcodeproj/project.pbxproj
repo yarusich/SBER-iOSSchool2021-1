@@ -10,7 +10,7 @@
 		84D468BA268094E700184DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D468B9268094E700184DBE /* AppDelegate.swift */; };
 		84D468C3268094EA00184DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D468C2268094EA00184DBE /* Assets.xcassets */; };
 		84D468C6268094EA00184DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D468C4268094EA00184DBE /* LaunchScreen.storyboard */; };
-		84D469462680E70500184DBE /* AsIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D469452680E70500184DBE /* AsIsViewController.swift */; };
+		84D469462680E70500184DBE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D469452680E70500184DBE /* SettingsViewController.swift */; };
 		84D469492680E7E700184DBE /* FiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D469482680E7E700184DBE /* FiltersCollectionViewCell.swift */; };
 		84D4694D2680EB1800184DBE /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4694C2680EB1800184DBE /* FilterService.swift */; };
 		84D469502680EBFD00184DBE /* FIlters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4694F2680EBFD00184DBE /* FIlters.swift */; };
@@ -24,7 +24,7 @@
 		84D468C2268094EA00184DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D468C5268094EA00184DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D468C7268094EA00184DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D469452680E70500184DBE /* AsIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsIsViewController.swift; sourceTree = "<group>"; };
+		84D469452680E70500184DBE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		84D469482680E7E700184DBE /* FiltersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D4694C2680EB1800184DBE /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		84D4694F2680EBFD00184DBE /* FIlters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIlters.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				84D469832681261E00184DBE /* ToBeViewController.swift */,
-				84D469452680E70500184DBE /* AsIsViewController.swift */,
+				84D469452680E70500184DBE /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				84D4694D2680EB1800184DBE /* FilterService.swift in Sources */,
 				84D469842681261E00184DBE /* ToBeViewController.swift in Sources */,
 				84D469502680EBFD00184DBE /* FIlters.swift in Sources */,
-				84D469462680E70500184DBE /* AsIsViewController.swift in Sources */,
+				84D469462680E70500184DBE /* SettingsViewController.swift in Sources */,
 				84D469492680E7E700184DBE /* FiltersCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

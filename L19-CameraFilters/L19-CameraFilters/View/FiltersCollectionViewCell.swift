@@ -9,7 +9,9 @@ import UIKit
 
 final class FiltersCollectionViewCell: UICollectionViewCell {
     
-    lazy var imageView: UIImageView = {
+    static let identifier = "CellID"
+    
+    private lazy var imageView: UIImageView = {
         let image = UIImageView()
         
         image.layer.masksToBounds = true
@@ -18,7 +20,7 @@ final class FiltersCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    lazy var filterLabel: UILabel = {
+    private lazy var filterLabel: UILabel = {
         let label = UILabel()
 
         label.font = .boldSystemFont(ofSize: 15)
@@ -33,9 +35,9 @@ final class FiltersCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.addSubview(imageView)
-//        imageView.addSubview(filterLabel)
-        self.addSubview(filterLabel)
+        addSubview(imageView)
+        imageView.addSubview(filterLabel)
+//        self.addSubview(filterLabel)
         
         setConstraints()
     }

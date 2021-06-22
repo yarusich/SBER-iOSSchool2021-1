@@ -8,5 +8,5 @@
 import UIKit
 
 struct ImagesWithFilters {
-    var images = [UIImage]()
+    var arrImages = [UIImage]()
 }
