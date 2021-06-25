@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol ToBeViewControllerDelegate: class {
+    func updateCurrentIntensity(intensity: CGFloat)
+    func saveImage()
+}
+
 final class ToBeViewController: UIViewController {
 
     private let filters = Filters()
@@ -14,12 +19,24 @@ final class ToBeViewController: UIViewController {
     private var currentImage = UIImage()
     private var imagesWithFilters = ImagesWithFilters()
     private var currentIntensity: CGFloat = 0.5
-    private var selectedFilter = String()
+    private var selectedFilter: String?
     
+    private lazy var imageLabel: UILabel = {
+        let label = UILabel()
+        
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        label.text = "Тапните для выбора изображения"
+        label.font = label.font.withSize(25)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }()
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         
+        imageView.backgroundColor = .none
         imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFit
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageTapped)))
@@ -27,17 +44,7 @@ final class ToBeViewController: UIViewController {
         
         return imageView
     }()
-    
-    private lazy var saveButton: UIButton = {
-        let button = UIButton(type: .system)
         
-        button.setTitle("Схр", for: .normal)
-        button.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        return button
-    }()
-    
     private lazy var settingsButton: UIButton = {
         let button = UIButton(type: .system)
         
@@ -88,35 +95,55 @@ final class ToBeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .red
+ 
+        view.backgroundColor = .white
         
+        view.addSubview(imageLabel)
         view.addSubview(imageView)
         view.addSubview(filtersCollectionView)
         
         let settings = UIBarButtonItem(customView: settingsButton)
-        let save = UIBarButtonItem(customView: saveButton)
-        navigationItem.setRightBarButtonItems([save, settings], animated: true)
-        setFiltersToImagesInCollectionView(currentImage: currentImage)
-        
+        navigationItem.setRightBarButtonItems([settings], animated: true)
+
         setConstraintes()
+    }
+    
+    override func viewWillLayoutSubviews() {
+//        if imageView.image == nil {
+//            filtersCollectionView.isHidden = true
+//        } else {
+//            filtersCollectionView.isHidden = false
+//        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateImageView()
     }
     
     private func setConstraintes() {
         NSLayoutConstraint.activate([
+            
+            imageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40),
         
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: filtersCollectionView.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -110),
             
             filtersCollectionView.heightAnchor.constraint(equalToConstant: 150),
             filtersCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
             filtersCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            filtersCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50)
+            filtersCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         ])
     }
     
+    private func updateImageView() {
+        imageView.image = filterService.doFilter(currentImage, filterName: selectedFilter, intensity: currentIntensity)
+    }
     
     private func setFiltersToImagesInCollectionView(currentImage: UIImage) {
         imagesWithFilters.arrImages = filters.arrOfFilters.map({ [self] item in
@@ -125,11 +152,12 @@ final class ToBeViewController: UIViewController {
     }
     
     @objc private func settingsButtonTapped() {
-        let settingsViewController = SettingsViewController()
+        let settingsViewController = SettingsViewController(imageFromToBeView: currentImage, selectedFilter: selectedFilter, selectedIntensity: currentIntensity)
+        settingsViewController.delegate = self
         navigationController?.pushViewController(settingsViewController, animated: true)
     }
 
-    @objc private func saveButtonTapped() {
+    @objc private func saveFunc() {
         guard let image = imageView.image else { return }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
@@ -149,10 +177,18 @@ final class ToBeViewController: UIViewController {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
         present(imagePicker, animated: true, completion: nil)
     }
+    
+//    MARK: Protocol's funcs
+    
+    func saveImage() {
+        saveFunc()
+    }
+
+    func updateCurrentIntensity(intensity: CGFloat) {
+        currentIntensity = intensity
+    }
 
 }
-
-
 
 extension ToBeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -162,6 +198,7 @@ extension ToBeViewController: UIImagePickerControllerDelegate, UINavigationContr
         imageView.image = currentImage
         filtersCollectionView.reloadData()
         setFiltersToImagesInCollectionView(currentImage: currentImage)
+        currentIntensity = 0.5
     
         dismiss(animated: true, completion: nil)
     }
@@ -189,8 +226,8 @@ extension ToBeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedFilter = filters.arrOfFilters[indexPath.item]
         navigationItem.title = "Фильтр: \(filters.arrOfFilters[indexPath.item])"
-        imageView.image = filterService.doFilter(currentImage, filterName: selectedFilter, intensity: currentIntensity)
+        updateImageView()
     }
 }
 
-
+extension ToBeViewController: ToBeViewControllerDelegate { }

@@ -11,9 +11,10 @@ class FilterService {
     
     let context = CIContext()
 
-    public func doFilter(_ image: UIImage, filterName: String, intensity: CGFloat) -> UIImage {
-
-            if let filter = CIFilter(name: filterName) {
+    public func doFilter(_ image: UIImage, filterName: String?, intensity: CGFloat) -> UIImage {
+        guard let _ = filterName else { return UIImage() }
+            
+            if let filter = CIFilter(name: filterName!) {
                 let ciImage = CIImage(image: image)
                 filter.setValue(ciImage, forKey: kCIInputImageKey)
                 filter.setValue(intensity, forKey: kCIInputIntensityKey)

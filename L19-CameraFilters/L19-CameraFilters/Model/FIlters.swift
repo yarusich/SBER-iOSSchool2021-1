@@ -8,5 +8,5 @@
 import Foundation
 
 struct Filters {
-    let arrOfFilters = ["CIBloom", "CISepiaTone", "CIVignette", "CIColorMonochrome", "CIGloom", "CIUnsharpMask", "CIDither"]
+    let arrOfFilters = ["CIEdges", "CISepiaTone", "CIVignette", "CIColorMonochrome", "CIUnsharpMask", "CIDither"]
 }
