@@ -13,11 +13,89 @@
 		84DD681826937312007842CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DD681626937312007842CD /* Main.storyboard */; };
 		84DD681A26937318007842CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DD681926937318007842CD /* Assets.xcassets */; };
 		84DD681D26937318007842CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DD681B26937318007842CD /* LaunchScreen.storyboard */; };
-		84DD68E5269B7C8F007842CD /* FirstObjcLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD68E4269B7C8F007842CD /* FirstObjcLib.m */; };
-		84DD68F0269B7E84007842CD /* SecondObjcLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD68EF269B7E84007842CD /* SecondObjcLib.m */; };
-		84DD68F9269B83CE007842CD /* SecondSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD68F8269B83CE007842CD /* SecondSwiftLib.swift */; };
-		84DD68FC269B845D007842CD /* FirstSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD68FB269B845D007842CD /* FirstSwiftLib.swift */; };
+		84DD6924269B8D96007842CD /* FirstObjcLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD6923269B8D96007842CD /* FirstObjcLib.m */; };
+		84DD6925269B8D96007842CD /* FirstObjcLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84DD6922269B8D96007842CD /* FirstObjcLib.h */; };
+		84DD692B269B8DA0007842CD /* libFirstObjcLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD6920269B8D96007842CD /* libFirstObjcLib.a */; };
+		84DD693B269B8EC4007842CD /* SecondObjcLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DD693A269B8EC4007842CD /* SecondObjcLib.m */; };
+		84DD693C269B8EC4007842CD /* SecondObjcLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84DD6939269B8EC4007842CD /* SecondObjcLib.h */; };
+		84DD694A269B8F82007842CD /* libSecondObjcLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD6937269B8EC4007842CD /* libSecondObjcLib.a */; };
+		84DD6957269B900A007842CD /* FirstSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD6956269B900A007842CD /* FirstSwiftLib.swift */; };
+		84DD695F269B907B007842CD /* libFirstSwiftLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD6954269B900A007842CD /* libFirstSwiftLib.a */; };
+		84DD696D269B90A0007842CD /* SecondSwiftLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD696C269B90A0007842CD /* SecondSwiftLib.swift */; };
+		84DD6976269B90B0007842CD /* libSecondSwiftLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DD696A269B90A0007842CD /* libSecondSwiftLib.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84DD692C269B8DA0007842CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DD680526937311007842CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DD691F269B8D96007842CD;
+			remoteInfo = FirstObjcLib;
+		};
+		84DD694B269B8F82007842CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DD680526937311007842CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DD6936269B8EC4007842CD;
+			remoteInfo = SecondObjcLib;
+		};
+		84DD6960269B907B007842CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DD680526937311007842CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DD6953269B900A007842CD;
+			remoteInfo = FirstSwiftLib;
+		};
+		84DD6977269B90B0007842CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84DD680526937311007842CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84DD6969269B90A0007842CD;
+			remoteInfo = SecondSwiftLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84DD691E269B8D96007842CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				84DD6925269B8D96007842CD /* FirstObjcLib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6935269B8EC4007842CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				84DD693C269B8EC4007842CD /* SecondObjcLib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6952269B900A007842CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6968269B90A0007842CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		84DD680D26937312007842CD /* Lesson31.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson31.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,19 +107,55 @@
 		84DD681C26937318007842CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DD681E26937318007842CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84DD684926937E92007842CD /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		84DD68E3269B7C8F007842CD /* FirstObjcLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstObjcLib.h; sourceTree = "<group>"; };
-		84DD68E4269B7C8F007842CD /* FirstObjcLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstObjcLib.m; sourceTree = "<group>"; };
-		84DD68E9269B7D24007842CD /* FirstUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstUmbrella.h; sourceTree = "<group>"; };
-		84DD68EE269B7E84007842CD /* SecondObjcLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondObjcLib.h; sourceTree = "<group>"; };
-		84DD68EF269B7E84007842CD /* SecondObjcLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondObjcLib.m; sourceTree = "<group>"; };
-		84DD68F2269B7EA2007842CD /* SecondUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondUmbrella.h; sourceTree = "<group>"; };
 		84DD68F4269B8178007842CD /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		84DD68F8269B83CE007842CD /* SecondSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSwiftLib.swift; sourceTree = "<group>"; };
-		84DD68FB269B845D007842CD /* FirstSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSwiftLib.swift; sourceTree = "<group>"; };
+		84DD6920269B8D96007842CD /* libFirstObjcLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFirstObjcLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DD6922269B8D96007842CD /* FirstObjcLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstObjcLib.h; sourceTree = "<group>"; };
+		84DD6923269B8D96007842CD /* FirstObjcLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstObjcLib.m; sourceTree = "<group>"; };
+		84DD6930269B8E5E007842CD /* FirstUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstUmbrella.h; sourceTree = "<group>"; };
+		84DD6937269B8EC4007842CD /* libSecondObjcLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSecondObjcLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DD6939269B8EC4007842CD /* SecondObjcLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondObjcLib.h; sourceTree = "<group>"; };
+		84DD693A269B8EC4007842CD /* SecondObjcLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondObjcLib.m; sourceTree = "<group>"; };
+		84DD6946269B8F23007842CD /* SecondUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondUmbrella.h; sourceTree = "<group>"; };
+		84DD6954269B900A007842CD /* libFirstSwiftLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFirstSwiftLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DD6956269B900A007842CD /* FirstSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSwiftLib.swift; sourceTree = "<group>"; };
+		84DD696A269B90A0007842CD /* libSecondSwiftLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSecondSwiftLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DD696C269B90A0007842CD /* SecondSwiftLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSwiftLib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		84DD680A26937312007842CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DD692B269B8DA0007842CD /* libFirstObjcLib.a in Frameworks */,
+				84DD6976269B90B0007842CD /* libSecondSwiftLib.a in Frameworks */,
+				84DD695F269B907B007842CD /* libFirstSwiftLib.a in Frameworks */,
+				84DD694A269B8F82007842CD /* libSecondObjcLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD691D269B8D96007842CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6934269B8EC4007842CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6951269B900A007842CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6967269B90A0007842CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,10 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				84DD680F26937312007842CD /* Lesson31 */,
-				84DD68E7269B7C9B007842CD /* FirstObjcLib */,
-				84DD68EC269B7DF6007842CD /* SecondObjcLib */,
-				84DD68F6269B8378007842CD /* FirstSwiftLib */,
-				84DD68F7269B8385007842CD /* SecondSwiftLib */,
+				84DD6921269B8D96007842CD /* FirstObjcLib */,
+				84DD6938269B8EC4007842CD /* SecondObjcLib */,
+				84DD6955269B900A007842CD /* FirstSwiftLib */,
+				84DD696B269B90A0007842CD /* SecondSwiftLib */,
 				84DD680E26937312007842CD /* Products */,
 				84DD683F26937C8F007842CD /* Frameworks */,
 			);
@@ -68,6 +182,10 @@
 			isa = PBXGroup;
 			children = (
 				84DD680D26937312007842CD /* Lesson31.app */,
+				84DD6920269B8D96007842CD /* libFirstObjcLib.a */,
+				84DD6937269B8EC4007842CD /* libSecondObjcLib.a */,
+				84DD6954269B900A007842CD /* libFirstSwiftLib.a */,
+				84DD696A269B90A0007842CD /* libSecondSwiftLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,38 +213,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84DD68E7269B7C9B007842CD /* FirstObjcLib */ = {
+		84DD6921269B8D96007842CD /* FirstObjcLib */ = {
 			isa = PBXGroup;
 			children = (
-				84DD68E3269B7C8F007842CD /* FirstObjcLib.h */,
-				84DD68E4269B7C8F007842CD /* FirstObjcLib.m */,
-				84DD68E9269B7D24007842CD /* FirstUmbrella.h */,
+				84DD6922269B8D96007842CD /* FirstObjcLib.h */,
+				84DD6923269B8D96007842CD /* FirstObjcLib.m */,
+				84DD6930269B8E5E007842CD /* FirstUmbrella.h */,
 			);
 			path = FirstObjcLib;
 			sourceTree = "<group>";
 		};
-		84DD68EC269B7DF6007842CD /* SecondObjcLib */ = {
+		84DD6938269B8EC4007842CD /* SecondObjcLib */ = {
 			isa = PBXGroup;
 			children = (
-				84DD68EE269B7E84007842CD /* SecondObjcLib.h */,
-				84DD68EF269B7E84007842CD /* SecondObjcLib.m */,
-				84DD68F2269B7EA2007842CD /* SecondUmbrella.h */,
+				84DD6939269B8EC4007842CD /* SecondObjcLib.h */,
+				84DD693A269B8EC4007842CD /* SecondObjcLib.m */,
+				84DD6946269B8F23007842CD /* SecondUmbrella.h */,
 			);
 			path = SecondObjcLib;
 			sourceTree = "<group>";
 		};
-		84DD68F6269B8378007842CD /* FirstSwiftLib */ = {
+		84DD6955269B900A007842CD /* FirstSwiftLib */ = {
 			isa = PBXGroup;
 			children = (
-				84DD68FB269B845D007842CD /* FirstSwiftLib.swift */,
+				84DD6956269B900A007842CD /* FirstSwiftLib.swift */,
 			);
 			path = FirstSwiftLib;
 			sourceTree = "<group>";
 		};
-		84DD68F7269B8385007842CD /* SecondSwiftLib */ = {
+		84DD696B269B90A0007842CD /* SecondSwiftLib */ = {
 			isa = PBXGroup;
 			children = (
-				84DD68F8269B83CE007842CD /* SecondSwiftLib.swift */,
+				84DD696C269B90A0007842CD /* SecondSwiftLib.swift */,
 			);
 			path = SecondSwiftLib;
 			sourceTree = "<group>";
@@ -145,11 +263,83 @@
 			buildRules = (
 			);
 			dependencies = (
+				84DD692D269B8DA0007842CD /* PBXTargetDependency */,
+				84DD694C269B8F82007842CD /* PBXTargetDependency */,
+				84DD6961269B907B007842CD /* PBXTargetDependency */,
+				84DD6978269B90B0007842CD /* PBXTargetDependency */,
 			);
 			name = Lesson31;
 			productName = Lesson31;
 			productReference = 84DD680D26937312007842CD /* Lesson31.app */;
 			productType = "com.apple.product-type.application";
+		};
+		84DD691F269B8D96007842CD /* FirstObjcLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DD6926269B8D96007842CD /* Build configuration list for PBXNativeTarget "FirstObjcLib" */;
+			buildPhases = (
+				84DD691C269B8D96007842CD /* Sources */,
+				84DD691D269B8D96007842CD /* Frameworks */,
+				84DD691E269B8D96007842CD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FirstObjcLib;
+			productName = FirstObjcLib;
+			productReference = 84DD6920269B8D96007842CD /* libFirstObjcLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84DD6936269B8EC4007842CD /* SecondObjcLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DD693D269B8EC4007842CD /* Build configuration list for PBXNativeTarget "SecondObjcLib" */;
+			buildPhases = (
+				84DD6933269B8EC4007842CD /* Sources */,
+				84DD6934269B8EC4007842CD /* Frameworks */,
+				84DD6935269B8EC4007842CD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecondObjcLib;
+			productName = SecondObjcLib;
+			productReference = 84DD6937269B8EC4007842CD /* libSecondObjcLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84DD6953269B900A007842CD /* FirstSwiftLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DD6958269B900A007842CD /* Build configuration list for PBXNativeTarget "FirstSwiftLib" */;
+			buildPhases = (
+				84DD6950269B900A007842CD /* Sources */,
+				84DD6951269B900A007842CD /* Frameworks */,
+				84DD6952269B900A007842CD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FirstSwiftLib;
+			productName = FirstSwiftLib;
+			productReference = 84DD6954269B900A007842CD /* libFirstSwiftLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84DD6969269B90A0007842CD /* SecondSwiftLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84DD696E269B90A0007842CD /* Build configuration list for PBXNativeTarget "SecondSwiftLib" */;
+			buildPhases = (
+				84DD6966269B90A0007842CD /* Sources */,
+				84DD6967269B90A0007842CD /* Frameworks */,
+				84DD6968269B90A0007842CD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecondSwiftLib;
+			productName = SecondSwiftLib;
+			productReference = 84DD696A269B90A0007842CD /* libSecondSwiftLib.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -163,6 +353,18 @@
 					84DD680C26937312007842CD = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
+					};
+					84DD691F269B8D96007842CD = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					84DD6936269B8EC4007842CD = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					84DD6953269B900A007842CD = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					84DD6969269B90A0007842CD = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -180,6 +382,10 @@
 			projectRoot = "";
 			targets = (
 				84DD680C26937312007842CD /* Lesson31 */,
+				84DD691F269B8D96007842CD /* FirstObjcLib */,
+				84DD6936269B8EC4007842CD /* SecondObjcLib */,
+				84DD6953269B900A007842CD /* FirstSwiftLib */,
+				84DD6969269B90A0007842CD /* SecondSwiftLib */,
 			);
 		};
 /* End PBXProject section */
@@ -202,17 +408,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84DD68FC269B845D007842CD /* FirstSwiftLib.swift in Sources */,
 				84DD681526937312007842CD /* ViewController.swift in Sources */,
-				84DD68F9269B83CE007842CD /* SecondSwiftLib.swift in Sources */,
-				84DD68F0269B7E84007842CD /* SecondObjcLib.m in Sources */,
 				84DD681126937312007842CD /* AppDelegate.swift in Sources */,
-				84DD68E5269B7C8F007842CD /* FirstObjcLib.m in Sources */,
 				84DD681326937312007842CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84DD691C269B8D96007842CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DD6924269B8D96007842CD /* FirstObjcLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6933269B8EC4007842CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DD693B269B8EC4007842CD /* SecondObjcLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6950269B900A007842CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DD6957269B900A007842CD /* FirstSwiftLib.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84DD6966269B90A0007842CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DD696D269B90A0007842CD /* SecondSwiftLib.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84DD692D269B8DA0007842CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DD691F269B8D96007842CD /* FirstObjcLib */;
+			targetProxy = 84DD692C269B8DA0007842CD /* PBXContainerItemProxy */;
+		};
+		84DD694C269B8F82007842CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DD6936269B8EC4007842CD /* SecondObjcLib */;
+			targetProxy = 84DD694B269B8F82007842CD /* PBXContainerItemProxy */;
+		};
+		84DD6961269B907B007842CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DD6953269B900A007842CD /* FirstSwiftLib */;
+			targetProxy = 84DD6960269B907B007842CD /* PBXContainerItemProxy */;
+		};
+		84DD6978269B90B0007842CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84DD6969269B90A0007842CD /* SecondSwiftLib */;
+			targetProxy = 84DD6977269B90B0007842CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		84DD681626937312007842CD /* Main.storyboard */ = {
@@ -393,6 +650,106 @@
 			};
 			name = Release;
 		};
+		84DD6927269B8D96007842CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DD6928269B8D96007842CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84DD693E269B8EC4007842CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DD693F269B8EC4007842CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84DD6959269B900A007842CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DD695A269B900A007842CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84DD696F269B90A0007842CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84DD6970269B90A0007842CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CGDWWS583F;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -410,6 +767,42 @@
 			buildConfigurations = (
 				84DD682226937318007842CD /* Debug */,
 				84DD682326937318007842CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DD6926269B8D96007842CD /* Build configuration list for PBXNativeTarget "FirstObjcLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DD6927269B8D96007842CD /* Debug */,
+				84DD6928269B8D96007842CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DD693D269B8EC4007842CD /* Build configuration list for PBXNativeTarget "SecondObjcLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DD693E269B8EC4007842CD /* Debug */,
+				84DD693F269B8EC4007842CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DD6958269B900A007842CD /* Build configuration list for PBXNativeTarget "FirstSwiftLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DD6959269B900A007842CD /* Debug */,
+				84DD695A269B900A007842CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84DD696E269B90A0007842CD /* Build configuration list for PBXNativeTarget "SecondSwiftLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84DD696F269B90A0007842CD /* Debug */,
+				84DD6970269B90A0007842CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

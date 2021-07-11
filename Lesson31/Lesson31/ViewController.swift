@@ -7,6 +7,7 @@
 
 import UIKit
 import ObjcModule
+import FirstSwiftLib
 
 
 class ViewController: UIViewController {
@@ -19,8 +20,9 @@ class ViewController: UIViewController {
         let secondObjc = firstObjc.secondString
         
 //        MARK: swift
-//        let firstSwift =
-//        let secondSwift = 
+        let firstSwift = FirstSwiftLib()
+        firstSwift.printSomethingOne()
+        firstSwift.printSomethingFromSecondLib()
     }
     
 

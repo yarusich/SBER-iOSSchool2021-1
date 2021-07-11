@@ -1,6 +1,6 @@
 //
 //  FirstObjcLib.m
-//  Lesson31
+//  FirstObjcLib
 //
 //  Created by Антон Сафронов on 11.07.2021.
 //

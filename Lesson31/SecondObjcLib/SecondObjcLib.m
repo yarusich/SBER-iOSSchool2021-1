@@ -1,6 +1,6 @@
 //
 //  SecondObjcLib.m
-//  Lesson31
+//  SecondObjcLib
 //
 //  Created by Антон Сафронов on 11.07.2021.
 //
